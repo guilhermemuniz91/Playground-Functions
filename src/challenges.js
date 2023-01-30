@@ -6,6 +6,11 @@
 
 // Desafio 4 - Crie a função footballPoints
 
+function footballPoints (wins, ties) {
+  let resultado = wins * 3 + ties * 1
+  return resultado
+}
+
 // Desafio 5 - Crie a função highestCount
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
