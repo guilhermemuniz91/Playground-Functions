@@ -8,6 +8,10 @@ function compareTrue(boolean1, boolean2) {
 
 // Desafio 2 - Crie a função splitSentence
 
+function splitSentence (array) {
+  return array.split(' ')
+}
+
 // Desafio 3 - Crie a função concatName
 
 /* function concatName() {
@@ -18,10 +22,10 @@ function compareTrue(boolean1, boolean2) {
 
 // Desafio 4 - Crie a função footballPoints
 
-/* function footballPoints (wins, ties) {
+function footballPoints (wins, ties) {
   let resultado = wins * 3 + ties * 1
   return resultado
-} */
+}
 
 // Desafio 5 - Crie a função highestCount
 
