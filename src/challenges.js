@@ -15,10 +15,8 @@ function splitSentence(array) {
 
 // Desafio 3 - Crie a função concatName
 
-function concatName() {
-  let ultimoItem = concatName.length - 1;
-  let primeiroItem = concatName[0];
-  return ultimoItem, primeiroItem;
+function concatName(names) {
+  return `${names[names.length - 1]}, ${names[0]}`;
 }
 
 // Desafio 4 - Crie a função footballPoints
@@ -30,17 +28,18 @@ function footballPoints(wins, ties) {
 
 // Desafio 5 - Crie a função highestCount
 
-/* function highestCount (array) {
-  let Count = 0;
-  let maiorNumero = array[0];
+function highestCount (numberArray) {
+  let countBiggestNumber = 0;
+  let maiorNumero = numberArray[0];
 
-  for (let index = 0; index < arguments.length; index += 1) {
-    if (arguments[index] > Count) {
-      count = arguments[i];
+  for (let iArray = 0; iArray < numberArray.length; iArray += 1) {
+    if (numberArray[iArray] > countBiggestNumber) {
+      countBiggestNumber = iArray;
+      maiorNumero = numberArray[iArray] 
     }
   }
-  return count
-} */
+  return countBiggestNumber
+}
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 
