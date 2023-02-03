@@ -29,15 +29,16 @@ function footballPoints(wins, ties) {
 // Desafio 5 - Crie a função highestCount
 
 function highestCount (numberArray) {
-  let highestNumber = {
-    highestNumberCount = 0,
-    highestNumberArray = numberArray[0],
+  let highestNumber = numberArray[0];
+  let highestNumberCount = 0;
+  for (let i = 0; i < numberArray.length; i += 1) {
+    if (numberArray[i] > highestNumber) {
+      highestNumber = numberArray[i];
+    }
   }
-
-  for (let iArray = 0; iArray < numberArray.length; iArray += 1) {
-    if (numberArray[iArray] > highestNumberCount) {
-      highestNumberCount = iArray;
-      maiorNumero = numberArray[iArray]
+  for (let i = 0; i < numberArray.length; i += 1) {
+    if (numberArray[i] === highestNumber) {
+      highestNumberCount += 1;
     }
   }
   return highestNumberCount
