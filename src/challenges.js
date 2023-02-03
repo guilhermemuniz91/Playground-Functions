@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 5 - Crie a função highestCount
 
-function highestCount (numberArray) {
+function highestCount(numberArray) {
   let highestNumber = numberArray[0];
   let highestNumberCount = 0;
   for (let i = 0; i < numberArray.length; i += 1) {
@@ -41,7 +41,7 @@ function highestCount (numberArray) {
       highestNumberCount += 1;
     }
   }
-  return highestNumberCount
+  return highestNumberCount;
 }
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
@@ -55,20 +55,39 @@ function calcRectangleArea(base, height) {
 function calcAllAreas(base, height, form) {
   let retorno = ``;
   switch (form) {
-  case 'triângulo':
-    retorno = `O valor da área do triângulo é de: ${calcTriangleArea(base, height)}`;
-    break;
-  case 'retângulo':
-    retorno = `O valor da área do retângulo é de: ${calcRectangleArea(base, height)}`;
-    break;
-  default:
-    retorno = `Não foi possível fazer o cálculo, insira uma forma geométrica válida`;
-  break;
+    case 'triângulo':
+      retorno = `O valor da área do triângulo é de: ${calcTriangleArea(
+        base,
+        height
+      )}`;
+      break;
+    case 'retângulo':
+      retorno = `O valor da área do retângulo é de: ${calcRectangleArea(
+        base,
+        height
+      )}`;
+      break;
+    default:
+      retorno = `Não foi possível fazer o cálculo, insira uma forma geométrica válida`;
+      break;
   }
   return retorno;
 }
 
 // Desafio 7 - Crie a função catAndMouse
+
+function catAndMouse(mouse, cat1, cat2) {
+  let distcat1 = Math.abs(mouse - cat1);
+  let distcat2 = Math.abs(cat2 - mouse);
+
+  if (distcat1 < distcat2) {
+    return 'cat1';
+  } else if (distcat1 > distcat2) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
+}
 
 // Desafio 8 - Crie a função fizzBuzz
 
@@ -79,19 +98,19 @@ function calcAllAreas(base, height, form) {
 // Não modifique essas linhas
 module.exports = {
   calcTriangleArea:
-    typeof calcTriangleArea === 'function' ? calcTriangleArea : () => { },
+    typeof calcTriangleArea === 'function' ? calcTriangleArea : () => {},
   calcRectangleArea:
-    typeof calcRectangleArea === 'function' ? calcRectangleArea : () => { },
-  calcAllAreas: typeof calcAllAreas === 'function' ? calcAllAreas : () => { },
-  catAndMouse: typeof catAndMouse === 'function' ? catAndMouse : () => { },
-  compareTrue: typeof compareTrue === 'function' ? compareTrue : () => { },
-  concatName: typeof concatName === 'function' ? concatName : () => { },
-  decode: typeof decode === 'function' ? decode : () => { },
-  encode: typeof encode === 'function' ? encode : () => { },
-  fizzBuzz: typeof fizzBuzz === 'function' ? fizzBuzz : () => { },
+    typeof calcRectangleArea === 'function' ? calcRectangleArea : () => {},
+  calcAllAreas: typeof calcAllAreas === 'function' ? calcAllAreas : () => {},
+  catAndMouse: typeof catAndMouse === 'function' ? catAndMouse : () => {},
+  compareTrue: typeof compareTrue === 'function' ? compareTrue : () => {},
+  concatName: typeof concatName === 'function' ? concatName : () => {},
+  decode: typeof decode === 'function' ? decode : () => {},
+  encode: typeof encode === 'function' ? encode : () => {},
+  fizzBuzz: typeof fizzBuzz === 'function' ? fizzBuzz : () => {},
   footballPoints:
-    typeof footballPoints === 'function' ? footballPoints : () => { },
-  highestCount: typeof highestCount === 'function' ? highestCount : () => { },
-  splitSentence: typeof splitSentence === 'function' ? splitSentence : () => { },
-  techList: typeof techList === 'function' ? techList : () => { },
+    typeof footballPoints === 'function' ? footballPoints : () => {},
+  highestCount: typeof highestCount === 'function' ? highestCount : () => {},
+  splitSentence: typeof splitSentence === 'function' ? splitSentence : () => {},
+  techList: typeof techList === 'function' ? techList : () => {},
 };
