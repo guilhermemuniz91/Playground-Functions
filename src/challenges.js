@@ -109,6 +109,41 @@ return retorno
 
 // Desafio 9 - Crie a função encode e a função decode
 
+function encode(string) {
+  let splited = string.split('');
+  for (let index = 0; index < splited.length; index += 1) {
+    if (splited[index] == 'a') {
+      splited[index] = 1;
+    } else if (splited[index] == 'e') {
+      splited[index] = 2;
+    } else if (splited[index] == 'i') {
+      splited[index] = 3;
+    } else if (splited[index] == 'o') {
+      splited[index] = 4;
+    } else if (splited[index] == 'u') {
+      splited[index] = 5;
+    }
+  } return splited.join('');
+}
+
+function decode (string) {
+  let splited = string.split('');
+  for (let index = 0; index < splited.length; index += 1) {
+    if(splited[index] == 1) {
+      splited[index] = 'a';
+    } else if (splited[index] == 2){
+      splited[index] = 'e';
+    } else if (splited[index] == 3){
+      splited[index] = 'i';
+    } else if (splited[index] == 4){
+      splited[index] = 'o';
+    } else if (splited[index] == 5){
+      splited[index] = 'u';
+    }
+  } return splited.join('');
+}
+
+
 // Desafio 10 - Crie a função techList
 
 // Não modifique essas linhas
